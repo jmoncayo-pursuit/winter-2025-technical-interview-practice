@@ -11,8 +11,26 @@
  * @returns {boolean} - True if the string is a palindrome, false otherwise.
  */
 function isPalindrome(str) {
-  const cleanedStr = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
-  return cleanedStr === cleanedStr.split('').reverse().join('');
+  // checking if the input is a string
+  if (typeof str !== "string") return false;
+
+  // normalize str 
+  const cleanedStr = str.replace(/[^A-Za-z0-9]/g, "").toLowerCase();
+
+  // initialize 2 pointer
+  let left = 0;
+  let right = cleanedStr.length -1;
+
+  //compare characters from both ends
+  while (left < right ) {
+    if (cleanedStr[left] !== cleanedStr[right]) {
+      return false;
+    }
+    left++;
+    right--;
+  }
+  return true; // is a palindrome
 }
 
 module.exports = isPalindrome;
+
