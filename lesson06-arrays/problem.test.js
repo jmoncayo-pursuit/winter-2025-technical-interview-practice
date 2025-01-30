@@ -17,8 +17,16 @@ describe("checkLargestElement", () => {
     const nums = [];
     expect(checkLargestElement(nums)).toBe(-1);
   });
+  test("should return -1 if the array has only one element", () => {
+    const nums = [1];
+    expect(checkLargestElement(nums)).toBe(-1);
+  }); 
   test("should return -1 if the largest element is not at least twice as much as every other number", () => {
     const nums = [1, 2, 3, 4];
     expect(checkLargestElement(nums)).toBe(-1);
   });
+  test("should return -1 if all elements are equal", () => {
+    const nums = [1, 1, 1, 1];
+    expect(checkLargestElement(nums)).toBe(-1);
+  }) 
 });
