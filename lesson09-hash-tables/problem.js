@@ -16,7 +16,19 @@ console.log(areAnagrams("programming", "coding")); // Expected output: false
 */
 
 function areAnagrams(str1, str2) {
-  // Your code here
+    if (str1.length !== str2.length) return false;
+    let count = Array(26).fill(0);
+    for (let i = 0; i < str1.length; i++) {
+      count[str1.charCodeAt(i) - 97]++;
+      count[str2.charCodeAt(i) - 97]--;
+    }
+    return count.every(c => c === 0);
 }
 
 module.exports = areAnagrams;
+
+console.log(areAnagrams("listen", "silent")); // true
+console.log(areAnagrams("hello", "world")); // false
+console.log(areAnagrams("rail safety", "fairy tales")); // true
+console.log(areAnagrams("restful", "fluster")); // true
+console.log(areAnagrams("programming", "coding")); // false
