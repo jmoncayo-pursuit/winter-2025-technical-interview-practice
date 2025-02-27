@@ -3,6 +3,7 @@
 ## Lecture Content (20 minutes)
 
 ### Deep Dive into Stack Applications
+a stack is an abctract data type that allows a users to push data, pop data from the most recent push, look at most recently pushed data, and check from emptiness / how many pieces of data are present. 
 
 #### Balanced Symbols
 Learn how stacks are used to determine if parentheses, brackets, and braces in a string are balanced.  

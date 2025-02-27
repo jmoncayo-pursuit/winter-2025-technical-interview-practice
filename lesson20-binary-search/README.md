@@ -13,7 +13,10 @@ To get started, let's refresh our memory on some fundamental concepts:
 ## Written Question (5 minutes)
 
 **Question**: Explain in your own words what a binary search algorithm is and why it is more efficient than a linear search in a sorted array.
-
+  - a binary search algorithm divides a sorted array in half by comparing the middle element with the target value 
+  - By eliminating half of the remaining elements with each comparison, a binary search is 0(log n) 
+  - a linear search's O(n) complexity since it checks each element sequentially. 
+  
 ## Lecture Content (20 minutes)
 
 **Introduction to Binary Search**

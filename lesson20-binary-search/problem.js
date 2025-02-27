@@ -4,5 +4,19 @@
 // target (integer): The value to search for in the array.
 
 module.exports = function binarySearch(arr, target) {
-  // code goes here
+  let left = 0;
+  let right = arr.length - 1;
+
+  while (left <= right) {
+    let mid = Math.floor((left + right) / 2);
+
+    if (arr[mid] === target) {
+      return mid; // found target
+    } else if (arr[mid] < target) {
+      left = mid + 1; /// check right half
+    } else {
+      right = mid - 1; // check left half
+    }
+  }
+  return -1; // target not found
 };

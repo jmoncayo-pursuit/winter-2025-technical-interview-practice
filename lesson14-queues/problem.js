@@ -14,15 +14,29 @@ class Queue {
     this.items = [];
   }
 
-  enqueue(element) {}
+  enqueue(element) {
+    this.items
+  }
 
-  dequeue() {}
+  dequeue(      ) {
+    if (this.isEmpty()) return null;
+    return this.items
+  }
 
-  peek() {}
+  peek( ) {   
+    if (this.isEmpty()) return null;
+    return
+    }
 
-  isEmpty() {}
+  isEmpty() { 
+    return
 
-  size() {}
+    }
+
+  size() {
+    return
+    
+  }
 }
 
 module.exports = Queue;

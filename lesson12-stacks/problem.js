@@ -11,19 +11,31 @@
     }
   
     push(item) {
-
+      if(this.end == this.size - 1) {
+        const largerArray = new Array(this.size * 2);
+        this.size *= 2;
+        largerArray.push(...this.items);
+        this.items = largerArray;
+      }
+      this.items[++this.end] = item;
+      return this;
     }
   
     pop() {
-    
+      if (this.isEmpty()) return null;
+      const item = this.items[this.end];
+      this.items[this.end] = undefined;
+      this.end--;
+      return item;
     }
   
     peek() {
-      
+      if (this.isEmpty()) return null;
+      return this.items[this.items.length - 1];  
     }
   
     isEmpty() {
-      
+      return this.items.length === 0;
     }
   }
   

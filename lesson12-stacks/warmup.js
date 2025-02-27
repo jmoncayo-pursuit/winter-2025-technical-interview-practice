@@ -1,6 +1,7 @@
 // 1. Given a string, return true if it contains only balanced parentheses '()'.
 // Example: '()' => true, '(())' => true, '(()' => false
 
+
 // 2. Extend the above to include curly braces '{}' and square brackets '[]'.
 // Example: '{[()]}' => true, '{[(])}' => false, '{{[[(())]]}}' => true
 

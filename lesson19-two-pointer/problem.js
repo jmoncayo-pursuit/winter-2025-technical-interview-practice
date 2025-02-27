@@ -21,7 +21,24 @@
  */
 
 function maxArea(heights) {
-  // Your code here
+  // 1. Use two pointers: one at the start and one at the end.
+  // 2. Compute area: width = right - left, height = min(height[left], height[right]).
+  let left = 0, right = heights.length - 1, maxArea = 0;
+  
+  while (left < right ) {
+    let h = Math.min(heights[left], heights[right]);
+    // 3. Track the max area.
+    maxArea = Math.max(maxArea, h * (right - left));
+    // 4. Move the pointer pointing to the shorter height inward (to find a taller line).
+
+    // 5. Repeat until pointers meet.
+    heights[left] < heights[right] ? left++ : right--;
+  }
+  return maxArea;
 }
+console.log(maxArea([1,8,6,2,5,4,8,3,7])); // 49
+console.log(maxArea([1,1])); // 1
+console.log(maxArea([4,3,2,1,4])); // 16
+console.log(maxArea([1,2,1])); // 2
 
 module.exports = maxArea;
